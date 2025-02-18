@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : BaseController
 {
@@ -12,12 +13,14 @@ public class PlayerController : BaseController
         camera = Camera.main;
     }    
 
-    protected override void HandleAction()
+    void OnMove(InputValue inputValue)
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        movementDirection = new Vector2(horizontal, vertical).normalized;
+        movementDirection = inputValue.Get<Vector2>();
+        movementDirection.Normalize();
+    }
 
+    void OnLook(InputValue inputValue)
+    {
         Vector2 mousePosition = Input.mousePosition;
         Vector2 worldPos = camera.ScreenToWorldPoint(mousePosition);
         lookDirection = (worldPos - (Vector2)transform.position);
@@ -30,5 +33,10 @@ public class PlayerController : BaseController
         {
             lookDirection = lookDirection.normalized;
         }
+    }
+
+    void OnJump(InputValue inputValue)
+    {
+        
     }
 }
