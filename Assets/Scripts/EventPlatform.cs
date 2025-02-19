@@ -47,7 +47,7 @@ public class EventPlatform : MonoBehaviour
     {
         if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E)) // E키를 누르면
         {
-            SceneManager.LoadScene("Minigame1"); // 원하는 씬으로 변경
+            SceneManager.LoadScene("Minigame1"); // 미니게임으로 변경
         }
     }
 }
