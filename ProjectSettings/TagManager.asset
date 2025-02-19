@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Minigame1
   - Minigame2
+  - Background
   layers:
   - Default
   - TransparentFX

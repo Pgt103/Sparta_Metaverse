@@ -538,6 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1500455877681581835}
   - component: {fileID: -6562487673021038384}
+  - component: {fileID: 8503294930536545817}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -574,13 +575,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de5a557332d8cb46a037ecdae9cebec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highPosY: 1.5
-  lowPosY: -1.5
+  highPosY: 2
+  lowPosY: -2
   holeSizeMin: 1
   hoseSizeMax: 3
   topObject: {fileID: 6537239035058917327}
   bottomObject: {fileID: 8730508412188220792}
-  widthPadding: 4
+  widthPadding: 8
+--- !u!61 &8503294930536545817
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327156886799496274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.512598, y: 0.9962802}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.514103, y: 10.10694}
+  m_EdgeRadius: 0
 --- !u!1 &7289928845802488954
 GameObject:
   m_ObjectHideFlags: 0

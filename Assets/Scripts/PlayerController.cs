@@ -48,5 +48,10 @@ public class PlayerController : BaseController
         {
             
         }
+
+        if (collision.gameObject.name == "DeathBox")
+        {
+            
+        }
     }
 }
