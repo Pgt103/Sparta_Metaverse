@@ -19,12 +19,6 @@ public class Obstacle : MonoBehaviour
 
     public float widthPadding = 4f;
 
-    GameManager gameManager;
-
-    private void Start()
-    {
-        gameManager = GameManager.Instance;
-    }
 
     public Vector3 SetRandomPlace(Vector3 lastPosition, int obstacleCount)
     {

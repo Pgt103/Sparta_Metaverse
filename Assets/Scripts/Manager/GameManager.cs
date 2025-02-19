@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    protected PlayerController playercontroller;
+    
     private static GameManager gameManager;
 
     public static GameManager Instance { get { return gameManager; } }
+    
+    protected RunawayUI runawayUI;
+    
+    public RunawayUI RunawayUI { get { return runawayUI; } }
 
-
-    private void Awake()
+    public virtual void Awake()
     {
-        gameManager = this;
+        Debug.Log("Awake 실행");
+        if (gameManager == null)
+            gameManager = this;
+        
+        playercontroller = FindObjectOfType<PlayerController>();
     }
-    
-    
+
+    private void Start()
+    {
+        
+    }
+
+    public void GameOver()
+    {
+
+    }
 }

@@ -9,6 +9,8 @@ public class PlayerController : BaseController
 {
     private Camera camera;
 
+    public bool IsDead = false;
+
     protected override void Start()
     {
         base.Start();
@@ -51,7 +53,8 @@ public class PlayerController : BaseController
 
         if (collision.gameObject.name == "DeathBox")
         {
-            
+            Debug.Log("Dead");
+            IsDead = true;
         }
     }
 }
