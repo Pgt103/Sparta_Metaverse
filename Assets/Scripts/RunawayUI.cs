@@ -10,6 +10,8 @@ public class RunawayUI : BaseUI
     RunawayManager runawayManager;
     
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI currentScoreText;
+    public TextMeshProUGUI bestScoreText;
     public Image startText;
     public Image resultText;
     // Start is called before the first frame update
@@ -39,12 +41,14 @@ public class RunawayUI : BaseUI
     public void SetResult()
     {
         Time.timeScale = 0;
+        bestScoreText.text = PlayerPrefs.GetFloat("bestScore").ToString("0.00");
         resultText.gameObject.SetActive(true);
     }
 
     public void UpdateScore(float score)
     {
         scoreText.text = score.ToString("0.00");
+        currentScoreText.text = score.ToString("0.00");
     }
 
     

@@ -22339,6 +22339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1379736349}
+  currentScoreText: {fileID: 1682285222}
+  bestScoreText: {fileID: 99700578}
   startText: {fileID: 1139830610}
   resultText: {fileID: 688781668}
 --- !u!1001 &1864426904601073356

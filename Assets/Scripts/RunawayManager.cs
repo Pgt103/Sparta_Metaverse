@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class RunawayManager : GameManager
 {
     public bool IsGameStarted = false;
+    private float time;
     void Awake()
     {
         runawayUI = FindObjectOfType<RunawayUI>();
@@ -28,6 +30,7 @@ public class RunawayManager : GameManager
 
         if (IsGameStarted)
         {
+            time = Time.timeSinceLevelLoad;
             runawayUI.UpdateScore(Time.timeSinceLevelLoad);
         }
 
@@ -45,7 +48,29 @@ public class RunawayManager : GameManager
 
     public void GameOver()
     {
-            Time.timeScale = 0;
-            runawayUI.SetResult();
+        Time.timeScale = 0;
+        
+
+        if (PlayerPrefs.HasKey("bestScore"))
+        {
+            float best = PlayerPrefs.GetFloat("bestScore");
+
+            if (best < time)
+            {
+                PlayerPrefs.SetFloat("bestScore", time);
+                runawayUI.bestScoreText.text = time.ToString("N2");
+            }
+            else
+            {
+                runawayUI.bestScoreText.text = best.ToString("N2");
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("bestScore", time);
+            runawayUI.bestScoreText.text = time.ToString("N2");
+        }
+            
+        runawayUI.SetResult();
     }
 }
