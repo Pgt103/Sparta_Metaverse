@@ -29,4 +29,9 @@ public class AnimationHandler : MonoBehaviour
     {
         animator.SetBool(IsJump, false);
     }
+
+    public void JumpEnd()
+    {
+        animator.SetBool(IsJump, false);
+    }
 }
