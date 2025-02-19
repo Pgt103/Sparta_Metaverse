@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 2837912183121454478}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 1216728968919046252}
   weaponPivot: {fileID: 4289499548384004338}
+  IsDead: 0
 --- !u!114 &2987390129728485414
 MonoBehaviour:
   m_ObjectHideFlags: 0
