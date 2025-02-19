@@ -56,7 +56,7 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 21300000, guid: 361bcfd56f91cd54f8e580357889076c, type: 3}
-    - time: 1
+    - time: 0.41666666
       value: {fileID: 21300000, guid: 361bcfd56f91cd54f8e580357889076c, type: 3}
     attribute: m_Sprite
     path: 
@@ -96,7 +96,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0833334
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -233,7 +233,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1
+  - time: 0.41666666
     functionName: JumpEnd
     data: 
     objectReferenceParameter: {fileID: 0}

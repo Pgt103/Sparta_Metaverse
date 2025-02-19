@@ -43,11 +43,19 @@ public class EventPlatform : MonoBehaviour
         }
     }
 
+    void Portal()
+    {
+        Debug.Log("미니게임으로 이동");
+        // 미니게임으로 변경
+        SceneManager.LoadScene("Minigame1");
+    }
+
     void Update()
     {
-        if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E)) // E키를 누르면
+        if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E) && gameObject.CompareTag("Portal")) // E키를 누르면
         {
-            SceneManager.LoadScene("Minigame1"); // 미니게임으로 변경
+            FadeInOut.Play(GlobalValue.Transition.Fade);
+            Invoke("Portal", 2f);
         }
     }
 }
