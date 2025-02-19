@@ -5,8 +5,9 @@ using UnityEngine;
 public class MainCameraController : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private float smoothTime = 0.2f;
+    [SerializeField] private float smoothTime = 0.2f; // 부드러운 느낌을 주도록하는 시간
 
+    // 맵밖을 보여주지 않도록 카메라의 최소, 최대 이동값 제한
     [SerializeField] private Vector2 minBoundary;
     [SerializeField] private Vector2 maxBoundary;
     
@@ -19,6 +20,4 @@ public class MainCameraController : MonoBehaviour
         
         transform.position = Vector3.Lerp(transform.position, targetPosition, smoothTime);
     }
-    
-    
 }

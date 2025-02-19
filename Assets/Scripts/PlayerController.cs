@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : BaseController
 {
@@ -38,5 +40,13 @@ public class PlayerController : BaseController
     void OnJump(InputValue inputValue)
     {
         animationHandler.Jump();
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Minigame1"))
+        {
+            
+        }
     }
 }
