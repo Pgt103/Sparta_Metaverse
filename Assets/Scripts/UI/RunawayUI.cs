@@ -40,7 +40,6 @@ public class RunawayUI : BaseUI
 
     public void SetResult()
     {
-        Time.timeScale = 0;
         bestScoreText.text = PlayerPrefs.GetFloat("bestScore").ToString("0.00");
         resultText.gameObject.SetActive(true);
     }

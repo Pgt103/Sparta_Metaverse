@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public virtual void Awake()
     {
+        Time.timeScale = 1;
         Debug.Log("Awake 실행");
         if (gameManager == null)
             gameManager = this;

@@ -7,16 +7,27 @@ public class ButtonManager : MonoBehaviour
 {
     public GameObject player;
     
+    PlayerController playerController;
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // 현재 씬 불러오기
     }
 
     public void Back()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        if(playerController != null)
+        {
+            playerController.IsDead = false;
+        }
+        else
+        {
+            Debug.Log("Player not found");
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); // 메인씬 불러오기
+        Time.timeScale = 1;
     }
 
+    // 플레이어 스프라이트 색 변경 메서드
     public void ChangeColorRed()
     {
         player = GameObject.FindGameObjectWithTag("Player"); // 태그를 통해 플레이어 오브젝트를 인식
