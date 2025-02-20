@@ -34,7 +34,7 @@ public class EventPlatform : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")) // 플레이어가 떠나면
+        if (collision.gameObject.CompareTag("Player")) // 플레이어가 오브젝트를 벗어나면
         {
             isPlayerOnPlatform = false;
             if (speechBubble != null)
@@ -52,7 +52,7 @@ public class EventPlatform : MonoBehaviour
         SceneManager.LoadScene("Minigame1");
     }
     
-    public void GameExit()
+    public void GameExit() // 게임 종료
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -63,9 +63,10 @@ public class EventPlatform : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E))
+        // 오브젝트 접촉 and e키를 눌렀을 때 상호작용이 있는 오브젝트는 반응한다
+        if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E)) 
         {
-            if (gameObject.CompareTag("Portal")) // E키를 누르면
+            if (gameObject.CompareTag("Portal")) 
             {
                 Portal();
             }
