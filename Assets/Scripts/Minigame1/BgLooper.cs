@@ -27,6 +27,7 @@ public class BgLooper : MonoBehaviour
     {
         Debug.Log("Triggered: " + collision.name);
 
+        // 배경과 충돌 시 배경을 앞쪽으로 재배치 한다
         if (collision.CompareTag("Background"))
         {
             // 사이즈를 가져오기 위해 단순한 콜리전이 아닌 박스콜라이더 취급을 해야한다.
@@ -38,6 +39,7 @@ public class BgLooper : MonoBehaviour
             return;
         }
 
+        // 옵스타클들을 랜덤한 위치에 재배치
         Obstacle obstacle = collision.GetComponent<Obstacle>();
         if (obstacle)
         {

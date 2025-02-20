@@ -17,6 +17,7 @@ public class RunawayUI : BaseUI
     // Start is called before the first frame update
     void Start()
     {
+        // 텍스트를 못 가져왔을 때
         if (startText == null)
             Debug.LogError("StartText is null");
         
@@ -34,17 +35,17 @@ public class RunawayUI : BaseUI
     public void StartGame()
     {
         Time.timeScale = 1;
-        scoreText.gameObject.SetActive(true);
-        startText.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(true); // 점수 표시
+        startText.gameObject.SetActive(false); // 시작 전 타이틀 가리기
     }
 
-    public void SetResult()
+    public void SetResult() // 결과 ui 출력
     {
         bestScoreText.text = PlayerPrefs.GetFloat("bestScore").ToString("0.00");
         resultText.gameObject.SetActive(true);
     }
 
-    public void UpdateScore(float score)
+    public void UpdateScore(float score) // 텍스트에 점수를 형변환해 넣어준다
     {
         scoreText.text = score.ToString("0.00");
         currentScoreText.text = score.ToString("0.00");

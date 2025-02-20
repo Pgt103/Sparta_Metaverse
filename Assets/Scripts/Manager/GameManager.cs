@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    protected PlayerController playercontroller;
+    protected PlayerController playercontroller; // 플레이어
     
-    private static GameManager gameManager;
-
+    private static GameManager gameManager; // 싱글톤 선언
     public static GameManager Instance { get { return gameManager; } }
     
     protected RunawayUI runawayUI;
@@ -18,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public virtual void Awake()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1; 
         Debug.Log("Awake 실행");
         if (gameManager == null)
             gameManager = this;
@@ -28,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // 타이틀 씬에서 F를 눌러 게임 진입
         if (SceneManager.GetActiveScene().buildIndex == 0 && Input.GetKeyDown(KeyCode.F))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

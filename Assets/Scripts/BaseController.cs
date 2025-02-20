@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseController : MonoBehaviour
+public class BaseController : MonoBehaviour // 움직이는 오브젝트 기반 클래스
 {
     protected Rigidbody2D _rigidbody;
     

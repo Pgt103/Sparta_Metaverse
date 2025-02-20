@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonManager : MonoBehaviour
+public class ButtonManager : MonoBehaviour // 플레이어 스프라이트 색 변경 버튼을 모아둔 클래스
 {
     public GameObject player;
     
