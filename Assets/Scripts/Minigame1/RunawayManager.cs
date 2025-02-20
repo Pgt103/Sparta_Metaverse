@@ -16,7 +16,6 @@ public class RunawayManager : GameManager
             Debug.LogError("No playercontroller found"); // 오류 메세지 출력
             playercontroller = FindObjectOfType<PlayerController>(); // 호출
         }
-        
         Time.timeScale = 0; // 씬에 진입했을 때 바로 시작되지 않게 시간을 멈춘다
     }
 
