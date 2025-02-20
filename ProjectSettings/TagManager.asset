@@ -8,6 +8,7 @@ TagManager:
   - Minigame2
   - Background
   - Portal
+  - Quit
   layers:
   - Default
   - TransparentFX

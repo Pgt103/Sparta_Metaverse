@@ -22,14 +22,4 @@ public class GameManager : MonoBehaviour
         
         playercontroller = FindObjectOfType<PlayerController>();
     }
-
-    private void Start()
-    {
-        
-    }
-
-    public void GameOver()
-    {
-
-    }
 }

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement; // 씬 전환을 위해 필요
 
 public class EventPlatform : MonoBehaviour
 {
+    GameManager gameManager;
+    
     public GameObject speechBubble; // 말풍선 UI
 
     private bool isPlayerOnPlatform = false;
@@ -49,12 +51,29 @@ public class EventPlatform : MonoBehaviour
         // 미니게임으로 변경
         SceneManager.LoadScene("Minigame1");
     }
+    
+    public void GameExit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+    }
 
     void Update()
     {
-        if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E) && gameObject.CompareTag("Portal")) // E키를 누르면
+        if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E))
         {
-            Portal();
+            if (gameObject.CompareTag("Portal")) // E키를 누르면
+            {
+                Portal();
+            }
+            else if (gameObject.CompareTag("Quit"))
+            {
+                GameExit();
+            }
         }
+        
     }
 }
