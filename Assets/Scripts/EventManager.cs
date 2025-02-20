@@ -54,8 +54,7 @@ public class EventPlatform : MonoBehaviour
     {
         if (isPlayerOnPlatform && Input.GetKeyDown(KeyCode.E) && gameObject.CompareTag("Portal")) // E키를 누르면
         {
-            FadeInOut.Play(GlobalValue.Transition.Fade);
-            Invoke("Portal", 2f);
+            Portal();
         }
     }
 }
