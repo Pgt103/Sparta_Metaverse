@@ -10219,7 +10219,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 502022241}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: MinigameButton, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -10277,7 +10277,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 502022236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a323647ad33419b4e900150fd4fc1d00, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c7cd45c1faf88f4d9799e4a264d6b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &516021645
@@ -25213,8 +25213,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2081663175}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Back
+        m_TargetAssemblyTypeName: MinigameButton, Assembly-CSharp
+        m_MethodName: BackToBase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25271,7 +25271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2081663170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a323647ad33419b4e900150fd4fc1d00, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c7cd45c1faf88f4d9799e4a264d6b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &2099363835 stripped

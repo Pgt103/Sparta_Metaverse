@@ -7,9 +7,9 @@ public class CameraMove : MonoBehaviour
     public float cameraMoveSpeed = 3f;
     public float speedPlus = 1f;
 
-    void Update()
+    void Update() // 카메라 이동
     {
-        float currentSpeed = cameraMoveSpeed + (speedPlus * Time.time);
+        float currentSpeed = cameraMoveSpeed + (speedPlus * Time.deltaTime);
         transform.Translate(Vector3.right * currentSpeed * Time.deltaTime);
     }
 }
